@@ -5,6 +5,10 @@ const courseSchema = new Schema({
         required: true,
         type: String
     },
+    subtitle: {
+        required: true,
+        type: String
+    },
     description: {
         required: true,
         type: String
@@ -37,6 +41,21 @@ const courseSchema = new Schema({
     testimonials: [{
         type: Schema.ObjectId, ref: "Testimonial"
     }],
+
+    learning: {
+        required: true,
+        type: [String]
+    },
+
+    createdOn: {
+        required: true,
+        type: Date
+    },
+
+    modifiedOn: {
+        required: true,
+        type: Date
+    }
 });
 
 // আমাকে check করতে হবে যে এ model টা already iniceated কি না ? যদি ইনিসিয়েটেড হয়ে থাকে তাহলে same model --> mongoose.models.Course কে আমরা  ইনিসিয়েটেড return করবো আর ইনিসিয়েটেড না হয়ে থাকে তাহলে ? নতুন model create --> mongoose.model("Course", courseSchema করবো । 
