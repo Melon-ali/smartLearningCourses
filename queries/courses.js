@@ -47,4 +47,12 @@ export async function getCourseDetails(id) {
     return repaceMongoIdInObject(course);
 }
 
+export async function getCourseDetailsByInstructor(instructorId){
+    const courses = await Course.find({instructor: instructorId}).lean();
+
+    return {
+        "courses": courses.length,
+    }
+}
+
 

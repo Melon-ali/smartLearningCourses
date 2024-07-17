@@ -36,6 +36,10 @@ const userSchema = new Schema({
     profilePicture: {
         required: false,
         type: String,
+    },
+    designation: {
+        required: false,
+        type: String
     }
 });
 
