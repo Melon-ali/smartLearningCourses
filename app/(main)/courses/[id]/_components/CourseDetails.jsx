@@ -1,30 +1,9 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CheckCheck } from "lucide-react";
-import { BookCheck } from "lucide-react";
-import { Clock10 } from "lucide-react";
-import { Radio } from "lucide-react";
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-  } from "@/components/ui/accordion";
-import { Video } from "lucide-react";
-import { NotepadText } from "lucide-react";
-import { FileQuestion } from "lucide-react";
-import { PlayCircle } from "lucide-react";
-import { SquarePlay } from "lucide-react";
-import { Tv } from "lucide-react";
-import { StickyNote } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { Presentation } from "lucide-react";
-import { UsersRound } from "lucide-react";
-import { Star } from "lucide-react";
-import { MessageSquare } from "lucide-react";
 import { formatMyDate } from "@/lib/date";
 import CourseOverview from "./CourseOverview";
 import CourseCurriculam from "./CourseCurriculam";
 import CourseInstructor from "./CourseInstructor";
+import Image from "next/image";
 
 const CourseDetails = ({course}) => {
   console.log(course);
@@ -46,7 +25,7 @@ const CourseDetails = ({course}) => {
           {/*  */}
           <div className="flex sm:items-center gap-5 flex-col sm:flex-row sm:gap-6 md:gap-20 mt-6">
             <div className="flex items-center gap-2">
-              <img
+              <Image
                 className="w-[40px] h-[40px] rounded-full"
                 src={course?.instructor?.profilePicture}
                 alt={course?.instructor?.firstName}

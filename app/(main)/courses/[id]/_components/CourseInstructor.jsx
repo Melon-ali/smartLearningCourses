@@ -4,6 +4,7 @@ import { MessageSquare } from "lucide-react";
 import { Star } from "lucide-react";
 
 import { getCourseDetailsByInstructor } from "@/queries/courses";
+import Image from "next/image";
 
 const CourseInstructor = async ({ course }) => {
   const instructor = course?.instructor;
@@ -17,9 +18,11 @@ const CourseInstructor = async ({ course }) => {
     <div className="bg-gray-50 rounded-md p-8">
       <div className="md:flex md:gap-x-5 mb-8">
         <div className="h-[310px] w-[270px] max-w-full  flex-none rounded mb-5 md:mb-0">
-          <img
+          <Image
             src={instructor?.profilePicture}
             alt={fullName}
+            width={768}
+            height={463}
             className="w-full h-full object-cover rounded"
           />
         </div>
