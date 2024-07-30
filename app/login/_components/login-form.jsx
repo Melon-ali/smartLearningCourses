@@ -11,9 +11,9 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { credentialLogin } from "@/app/actions";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { credentialLogin } from "@/app/actions";
 
 export function LoginForm() {
   const [error, setError] = useState("");

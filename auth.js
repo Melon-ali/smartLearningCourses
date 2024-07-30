@@ -1,4 +1,5 @@
 import NextAuth from "next-auth";
+import { authConfig } from "./auth.config";
 import CredentialsProvider from "next-auth/providers/credentials";
 
 import { User } from "./model/user-model";
@@ -11,9 +12,7 @@ export const {
     signIn,
     signOut,
 } = NextAuth({
-    session: {
-        strategy: 'jwt',
-    },
+    ...authConfig,
     providers: [
         CredentialsProvider({
             async authorize(credentials) {
