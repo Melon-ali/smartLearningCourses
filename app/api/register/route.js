@@ -34,6 +34,7 @@ export const POST = async (request) => {
     await User.create(newUser)
     return new NextResponse('User has been createted', { status: 201 })
   } catch (error) {
+    console.log(error);
     return new NextResponse(error.message, {
       status: 500,
     })
